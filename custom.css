@@ -1,0 +1,500 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-image: url(img/bg_img.jpg);
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 65px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 0 8px 0 rgba(163, 84, 84, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.clear {
+    clear: left;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 24px;
+    padding: 5px 0;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+    transition: all 0.5s;
+}
+
+.header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: black;
+    font-weight: bold;
+    display: block;
+}
+
+.header-link {
+    float: left;
+}
+
+.header-link:hover {
+    background-color: #CCCCCC;
+}
+
+.header-h16 {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.header-h16 img {
+    float: left;
+}
+
+.header-nav a {
+    float: right;
+}
+
+.top-wrapper {
+    padding: 150px 0 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.top-wrapper h1 {
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px white;
+/* blinking */
+    animation:blinkingText 2s infinite;
+  }
+@keyframes blinkingText{
+    0%{     color: white;    }
+    49%{    color: black; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: white;    }
+}
+/* End Blinking */
+.top-wrapper p,
+.top-wrapper h3 {
+    text-shadow: 2px 2px 4px #000000;
+}
+/* Slider */
+.slider {
+	border: 10px solid #efefef;
+	position: relative;
+	overflow: hidden;
+	background: #efefef;
+	margin:20px auto;
+	width: 768px;
+	height: 450px;
+}
+
+.slider-contents img {
+	width: 768px;
+	height: 450px;
+	float: left;
+}
+
+.slider-contents {
+	position: absolute;
+	max-width:3900px;
+
+	/*pengaturan durasi lama tampil gambar bisa di atur di bawah ini*/
+	animation-name:slider;
+	animation-duration:10s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count:infinite;
+	-webkit-animation-name:slider;
+	-webkit-animation-duration:10s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-name:slider;
+	-moz-animation-duration:10s;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-iteration-count:infinite;
+	-o-animation-name:slider;
+	-o-animation-duration:5s;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-iteration-count:infinite;
+}
+
+/*saat gambar di hover oleh cursor mouse maka berhenti slide*/
+.slider-contents:hover {
+	-webkit-animation-play-state:paused;
+	-moz-animation-play-state:paused;
+	-o-animation-play-state:paused;
+	animation-play-state:paused; }
+}
+
+.slider-contents img {
+	float: right;
+}
+
+.slider:after {
+	font-size: 150px;
+	position: absolute;
+	z-index: 12;
+	color: rgba(255,255,255, 0);
+	left: 300px; top: 80px;
+	-webkit-transition: 1s all ease-in-out;
+	-moz-transition: 1s all ease-in-out;
+	transition: 1s all ease-in-out;
+}
+
+.slider:hover:after {
+	color: rgba(255,255,255, 0.6);
+}
+
+@-moz-keyframes slider {
+	0% {
+		left: 0; opacity: 0;
+	}
+	2% {
+		opacity: 1;
+	}
+	20% {
+		left: 0; opacity: 1;
+	}
+	21% {
+		opacity: 0;
+	}
+	24% {
+		opacity: 0;
+	}
+	25% {
+		left: -768px; opacity: 1;
+	}
+	45% {
+		left: -768px; opacity: 1;
+	}
+	46% {
+		opacity: 0;
+	}
+	48% {
+		opacity: 0;
+	}
+	50% {
+		left: -1536px; opacity: 1;
+	}
+	70% {
+		left: -1536px; opacity: 1;
+	}
+	72% {
+		opacity: 0;
+	}
+	74% {
+		opacity: 0;
+	}
+	75% {
+		left: -2304px; opacity: 1;
+	}
+	95% {
+		left: -2304px; opacity: 1;
+	}
+	97% {
+		left: -2304px; opacity: 0;
+	}
+	100% {
+		left: 0; opacity: 0;
+	}
+}
+
+@-webkit-keyframes slider {
+	0% {
+		left: 0; opacity: 0;
+	}
+	2% {
+		opacity: 1;
+	}
+	20% {
+		left: 0; opacity: 1;
+	}
+	21% {
+		opacity: 0;
+	}
+	24% {
+		opacity: 0;
+	}
+	25% {
+		left: -768px; opacity: 1;
+	}
+	45% {
+		left: -768px; opacity: 1;
+	}
+	46% {
+		opacity: 0;
+	}
+	48% {
+		opacity: 0;
+	}
+	50% {
+		left: -1536px; opacity: 1;
+	}
+	70% {
+		left: -1536px; opacity: 1;
+	}
+	72% {
+		opacity: 0;
+	}
+	74% {
+		opacity: 0;
+	}
+	75% {
+		left: -2304px; opacity: 1;
+	}
+	95% {
+		left: -2304px; opacity: 1;
+	}
+	97% {
+		left: -2304px; opacity: 0;
+	}
+	100% {
+		left: 0; opacity: 0;
+	}
+}
+
+
+@keyframes slider {
+	0% {
+		left: 0; opacity: 0;
+	}
+	2% {
+		opacity: 1;
+	}
+	20% {
+		left: 0; opacity: 1;
+	}
+	21% {
+		opacity: 0;
+	}
+	24% {
+		opacity: 0;
+	}
+	25% {
+		left: -768px; opacity: 1;
+	}
+	45% {
+		left: -768px; opacity: 1;
+	}
+	46% {
+		opacity: 0;
+	}
+	48% {
+		opacity: 0;
+	}
+	50% {
+		left: -1536px; opacity: 1;
+	}
+	70% {
+		left: -1536px; opacity: 1;
+	}
+	72% {
+		opacity: 0;
+	}
+	74% {
+		opacity: 0;
+	}
+	75% {
+		left: -2304px; opacity: 1;
+	}
+	95% {
+		left: -2304px; opacity: 1;
+	}
+	97% {
+		left: -2304px; opacity: 0;
+	}
+
+	100% {
+		left: 0; opacity: 0;
+	}
+}
+/* End Slider */
+/* CSS Extra-1 */
+.extra1-caption {
+    padding: 16px 24px;
+}
+
+.extra1-caption h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 16px;
+}
+
+.extra1-contents {
+    position: relative;
+    margin: 0 16px 30px 30px;
+    float: left;
+    transition: transform .2s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.extra1-judul {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 4px 8px;
+    position: absolute;
+    text-align: center;
+}
+
+.extra1-img {
+    height: 160px;
+}
+
+.extra1-contents:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* End CSS Extra-1 */
+/* CSS Extra-2 */
+.extra2-rating {
+  direction: rtl;
+  color: white;
+}
+.extra2-rating > span {
+  color: yellow;
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.extra2-rating > span:hover:before,
+.extra2-rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+.extra2-caption {
+    padding: 16px 24px;
+    text-align: center;
+    font-weight: bold;
+}
+.extra2-caption h3 {
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 16px;
+    text-align: left;
+}
+.extra2-contents {
+    position: relative;
+    margin: 0 15px 50px 50px;
+    float : left;
+    transition: transform .4s;
+}
+.extra2-judul {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 4px 8px;
+    text-align: center;
+}
+.extra2-img {
+    height: 150px;
+}
+.extra2-contents:hover {
+    transform: translate(15px, 15px);
+    opacity: 1;
+}
+/* End CSS Extra-2 */
+/* Footer */
+footer {
+	background-color: #F0F8FF;
+	height: 150px;
+	width: 100%;
+}
+.footer-logo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100px;
+    margin-left: 24px;
+}
+.footer-left {
+    float: left;
+}
+.footer-right {
+    float: right;
+}
+.footer-list li:hover {
+    border-bottom: 1px solid #DCDCDC;
+}
+.footer-bottom {
+    text-align: center;
+}
+.footer-bottom p {
+    padding-top: 120px;
+    font-size: 15px;
+    font-weight: bold;
+}
+li {
+    list-style: none;
+}
+.footer-list li {
+    float: left;
+    padding-top: 25px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.list-logo img {
+    padding-top: 25px;
+    width: 20px;
+    height: 20px;
+}
+.list-logo {
+    float: right;
+}
+.list-logo li:hover {
+    opacity: 0.7;
+}
+
+.menu-icon {
+	float: right;
+	width: 50px;
+	padding: 10px 15px;
+	display: none;
+}
+
+#scroll-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px 19px;
+    border-radius: 100px;
+  }
+
+#scroll-btn:hover {
+    background-color: #555;
+}
+/* End Footer */
